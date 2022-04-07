@@ -40,13 +40,12 @@ def create(request):
 def read(request, id):
     global topics
     article=''
-    
-    #tmparticle=''
-    #tmparticle = f
-    #list comprehension practice - false
-    #<h2>{[topic["title"] for topic in topics if topic['id']==int(id)]}</h2>
-    #{[topic["body"] for topic in topics if topic['id']==int(id)]}
-
+"""    tmparticle=''
+    tmparticle = f
+list comprehension practice - false
+   <h2>{[topic["title"] for topic in topics if topic['id']==int(id)]}</h2>
+    {[topic["body"] for topic in topics if topic['id']==int(id)]}
+"""
     for topic in topics:
         if topic['id'] == int(id):
             article = f'<h2>{topic["title"]}</h2>{topic["body"]}'
